@@ -104,6 +104,7 @@ class Marc2BibframeTCPHandler(SocketServer.StreamRequestHandler):
             dynamic_context.setParameter("serialization", "rdfxml")
             output_stream = ByteArrayOutputStream()
             result = StreamResult(output_stream)
+            print("Before query")
             COMPLIED_XQUERY.run(dynamic_context, result, None)
             self.wfile.write(output_stream.toString().encode('ascii',
                                                          errors='ignore'))
