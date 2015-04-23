@@ -1,15 +1,15 @@
-#-------------------------------------------------------------------------------
-# Name:        server
-# Purpose:     This module creates a socket server using jython for transforming
-#              MARC xml to BIBFRAME RDF using the Saxon jquery engine and the
-#              XQuery script from https://github.com/lcnetdev/marc2bibframe/
-#
-# Author:      Jeremy Nelson
-#
-# Created:     2014/05/22
-# Copyright:   (c) Jeremy Nelson, Colorado College 2014
-# Licence:     MIT
-#-------------------------------------------------------------------------------
+"""
+Name:        server
+Purpose:     This module creates a socket server using jython for transforming
+              MARC xml to BIBFRAME RDF using the Saxon jquery engine and the
+              XQuery script from https://github.com/lcnetdev/marc2bibframe/
+
+Author:      Jeremy Nelson
+
+Created:     2014/05/22
+Copyright:   (c) Jeremy Nelson, Colorado College 2014, 2015
+License:     MIT
+"""
 import argparse
 import datetime
 import json
@@ -18,8 +18,6 @@ import SocketServer
 import sys
 import tempfile
 import urllib
-
-
 
 for filename in os.listdir("./lib"):
     if os.path.splitext(filename)[-1].endswith(".jar"):
