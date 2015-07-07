@@ -30,6 +30,10 @@ You can then send raw MARC21 XML to socket 8089 and BIBFRAME RDF XML
 will be returned. See this [gist](https://gist.github.com/jermnelson/872c32d689bfbd6c0fec)
 on the **xquery_chain** function that uses the bibframe-socket server.
 
+## As Tomcat webapp
 
+Creating a WAR file:
+
+`/opt/jdk/bin/jar cvf bfsocket.war .`
 
 [marc2bibframe]: https://github.com/lcnetdev/marc2bibframe/
