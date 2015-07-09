@@ -88,6 +88,7 @@ class Marc2BibframeTCPHandler(SocketServer.StreamRequestHandler):
             marc_xmlfile = NamedTemporaryFile(delete=False)
             marc_xmlfile.write(raw_xml)
             marc_xmlfile.close()
+            print(marc_xmlfile.name)
             dynamic_context = saxon.query.DynamicQueryContext(CONFIG)
 ##            xml_doc = CONFIG.buildDocument(
 ##                StreamSource(ByteArrayInputStream(raw_xml)))
