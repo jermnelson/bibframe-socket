@@ -1,0 +1,30 @@
+<web-app>
+
+  <context-param>
+    <param-name>log_level</param-name>
+    <param-value>info</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>bfsocket</servlet-name>
+      <servlet-class>com.xhaus.modjy.ModjyJServlet</servlet-class>
+      <init-param>
+        <param-name>log_level</param-name>
+        <param-value>debug</param-value>
+      </init-param>
+      <init-param>
+        <param-name>python.home</param-name>
+        <param-value>$/lib/jython.jar</param-value>
+     </init-param>
+      <init-param>
+        <param-name>app_import_name</param-name>
+        <param-value>server.main</param-value>
+     </init-param>
+     <init-param>
+       <param-name>app_directory</param-name>
+       <param-value>debug</param-value>
+     </init-param>
+  </servlet>
+
+</web-app>
+
